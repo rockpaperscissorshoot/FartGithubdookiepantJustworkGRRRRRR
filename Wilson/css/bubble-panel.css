@@ -1,0 +1,100 @@
+/* Top */
+#page1 #top {
+    grid-area: top;
+    text-align: center;
+}
+
+/* Bubble Panel */
+#page1 .bubble-panel {
+    display: grid;
+    border-radius: var(--panel-radius);
+    grid-template-areas: 'bubble text';
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+#page1 .bubble-panel.right {
+    grid-template-areas: 'text bubble';
+    grid-template-columns: 4fr 1fr;
+}
+
+#page1 .bubble-panel.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#page1 .bubble-panel .bubble {
+    border-radius: var(--panel-radius);
+    grid-area: bubble;
+    display: flex;
+    flex-direction: column;
+    transform: scale(1.1);
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: var(--panel-gap);
+    margin-bottom: var(--panel-gap);
+    margin-left: var(--panel-gap);
+    margin-right: 0px
+}
+
+#page1 .bubble-panel.right .bubble {
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: var(--panel-gap);
+    margin-bottom: var(--panel-gap);
+    margin-left: 0px;
+    margin-right: var(--panel-gap);
+}
+
+#page1 .bubble-panel .content {
+    grid-area: text;
+    background-color: rgb(255, 255, 255);
+    border-radius: var(--panel-radius);
+    text-align: left;
+    padding: var(--panel-gap);
+    margin-top: var(--panel-gap);
+    margin-bottom: var(--panel-gap);
+    margin-left: 0px;
+    margin-right: var(--panel-gap);
+}
+
+#page1 .bubble-panel.right .content {
+    padding: var(--panel-gap);
+    margin-top: var(--panel-gap);
+    margin-bottom: var(--panel-gap);
+    margin-left: var(--panel-gap);
+    margin-right: 0px;
+}
+
+/* Bubble label */
+#page1 .bubble-label {
+    border-radius: var(--panel-radius);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: var(--panel-gap);
+    margin-bottom: var(--panel-gap);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: var(--panel-gap);
+    padding-right: var(--panel-gap);
+}
+
+#page1 .bubble-label p {
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+
+/* Section colors */
+#page1 #introduction {
+    background-color: rgb(255, 248, 240);
+}
+
+#page1 #species .wrapper {
+    background-color: rgb(251, 231, 208);
+}
+
+#page1 #routines .wrapper {
+    background-color: rgb(242, 251, 208);
+}

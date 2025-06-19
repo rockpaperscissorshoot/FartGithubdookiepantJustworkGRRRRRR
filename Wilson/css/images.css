@@ -1,0 +1,22 @@
+/* Images */
+#page1 img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--panel-radius);
+    display: block;
+}
+
+#page1 .credited p {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#page1 .credited a img {
+    transition: transform 0.25s ease-in-out;
+}
+
+#page1 .credited a img:hover {
+    transform: scale(1.05);
+}

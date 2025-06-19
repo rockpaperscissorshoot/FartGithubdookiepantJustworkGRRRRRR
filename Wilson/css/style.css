@@ -1,0 +1,29 @@
+@import url(./bubble-panel.css);
+@import url(./images.css);
+@import url(./glass-button.css);
+
+#page1 {
+    --panel-radius: 1vh;
+    --panel-gap: 3vh;
+
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+    gap: var(--panel-gap);
+}
+
+/* Heading/Paragraphs */
+#page1 h1 {
+    font-size: 3em;
+}
+
+#page1 h2 {
+    font-size: 2em;
+}
+
+#page1 p {
+    font-size: 1.75em;
+}

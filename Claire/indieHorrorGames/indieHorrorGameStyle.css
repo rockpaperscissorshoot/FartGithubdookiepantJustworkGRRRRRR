@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url('indieHorrorGames/pictures/parallaxBackground.gif'); */
+    color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    /* overflow: hidden; */ /* Remove this to allow scrolling */
+}
+
+h1, h2, h4 {
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+#secondaryNav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #333;
+    padding: 10px;
+}
+
+
+#navbar a:hover {
+    background-color: #555;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#secondaryNav a {
+    background-color: #656565;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; 
+    width: 100%;   
+    text-align: center;
+    border-radius: 10px;
+}
+
+#secondaryNav a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#squirrelStapplerButton {
+    background-image: url('pictures/longersquirrelstapler.png');
+}
+
+#squirrelStapplerButton a:hover {
+    background-image: url('pictures/longersquirrelstapler.png');
+    background-size: cover;
+    filter: blur(5px);
+}
+
+#SOMAButton {
+    background-image: url('pictures/somaLongerIcon.jpg');
+}
+
+#signalisButton {
+    background-image: url('pictures/signalisIco.png');
+}
+
+#stillWakestheDeepButton {
+    background-image: url('pictures/stillWakesTheDeepIcon.jpg');
+}
+
+#mainContent {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.showMoreButton{
+    background-color: #656565; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 1em; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    border: 2px solid #555; /* Border around the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.showMoreButton:hover {
+    background-color: #555; 
+    color: #ffffff;
+    border: 2px solid #555;
+}
+
+.infoSection {
+    display: none; 
+    align-items: center; 
+    gap: 15px; /* Reduced gap */
+    padding: 10px; /* Reduced padding */
+    border-radius: 10px; 
+    margin-bottom: 20px; /* Reduced margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+.infoSection:first-of-type {
+    display: flex; 
+    opacity: 1;
+}
+.infoSection.visible {
+    display: block;
+    opacity: 1;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.imageContent {
+    flex: 1;
+    text-align: center;
+}
+
+.imageContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .infoSection {
+        flex-direction: column;
+    }
+
+    .imageContent {
+        order: -1; 
+    }
+}
+.slide {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto; /* Allow dynamic height for content */
+    box-sizing: border-box;
+    background-color: #282828;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevent interaction when hidden */
+    display: none; /* Ensure it's not taking up space */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1; /* Make visible */
+    visibility: visible; /* Allow interaction */
+    display: block; /* Ensure it's displayed */
+    z-index: 2; /* Bring the active section to the front */
+}
+
+  .slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+  }
+
+[data-parallax] {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+[data-parallax].slide.active {
+    opacity: 1; /* Ensure parallax elements are visible when active */
+    visibility: visible;
+    display: block;
+}
+
+.steam {
+    display: inline-block; /* Ensure it behaves like an inline element */
+    width: 100px; /* Set a fixed width for the icon */
+    height: 100px; /* Set a fixed height for the icon */
+    background-image: url('pictures/steamIcon.png'); /* Steam icon */
+    background-size: contain; /* Ensure the entire image is visible */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center; /* Center the image */
+    vertical-align: middle; /* Align with text if used inline */
+}

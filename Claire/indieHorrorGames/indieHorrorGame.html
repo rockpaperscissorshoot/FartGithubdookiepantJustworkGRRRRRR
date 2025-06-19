@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minipedia</title>
+    <link rel="stylesheet" type="text/css" href="indieHorrorGameStyle.css">
+    <link rel="stylesheet" type="text/css" href="indieHorrorGameNav.css">
+    <script src="showSection.js" defer></script>
+   <script src="showMore.js" defer></script>
+   <link rel="icon" type="image/x-icon" href="/images/minipediaIcon.ico">
+</head>
+<body>
+<section id="topBar">
+    <div id="navbar">
+        <a href="/Mainpage/homepage.html">Home</a>
+        <a href="/Moksha/idea/index.html">Art</a>
+        <a href="/Athan/Planetary.html">Moons</a>
+        <a href="/Wilson/">Hamsters</a>
+        <a href="/Claire/indieHorrorGames/indieHorrorGame.html">Horror</a>
+        <a href="/Matt/index.html">Ice Cream</a>
+        <a href="/Monica/Home.html">Whooper</a>
+        <a href="/Sheridon/Home.html">Chips</a>
+    </div>
+</section>
+
+<h1>Minipedia</h1>
+<h2 id="title">Indie Horror Games</h2>
+<div id="secondaryNav">
+    <a href="#squirrelStappler" onclick="showSection('squirrelStappler')" class="navButton" id="squirrelStapplerButton"></a>
+    <a href="#SOMA" onclick="showSection('SOMA')" class="navButton" id="SOMAButton"></a>
+    <a href="#signalis" onclick="showSection('signalis')" class="navButton" id="signalisButton"></a>
+    <a href="#stillWakestheDeep" onclick="showSection('stillWakestheDeep')" class="navButton" id="stillWakestheDeepButton"></a>
+</div>
+
+<section id="mainContent">
+
+    <div id="squirrelStappler" class="infoSection">
+        <div class="textContent">
+            <h2 id="squirrelStapplerTitle">Squirrel Stappler</h2>
+            <h4 id="squirrelStapplerDeveloper">Developer: David Syzmanki</h4>
+            <p id="squirrelStapplerParagraph">A revolutionary psychological horror game created by the widely known developer of Iron Lung.<br> Enjoy stapling squirrels to your beautiful wife while awaiting an encounter with God! PS. Highly recommended to gift to a friend.</p>
+            <button id="squirrelStapplerButtons" class="showMoreButton" onclick="showMore('squirrelStaplerMoreInfo')">Show More</button>
+        </div>
+        <div class="imageContent">
+            <img id="squirrelStapplerImage" src="pictures\longersquirrelstapler.png" alt="Squirrel Stappler">
+        </div>
+    </div>
+
+    <div id="squirrelStaplerMoreInfo" class="infoSection slide" data-parallax>
+        <p>Do you like squirrels? Do you want to meet God? Do you want to give or have an experience like no other? Squirrel Stapler has it all. Enjoy hunting the squirrels<br> of the wood until God descends on you. If you want an experience so unique then Squirrel Stapler may be the game you want to get, or give to a friend.</p>
+        <a href="https://store.steampowered.com/app/2535830/Squirrel_Stapler/" class="steam" target="_blank"> </a>
+    </div>
+
+    <div id="SOMA" class="infoSection">
+        <div class="textContent">
+            <h2 id="SOMATitle">SOMA</h2>
+            <h4 id="SOMADeveloper">Developer: Frictional Games</h4>
+            <p id="SOMAParagraph">An underrated masterpiece created by the minds behind Amnesia: The Dark Descent.<br> Follow the tragic story of Simon as he's suddenly transported to the depths of the ocean 100 years in the future.</p>
+            <button id="SOMAButtons" class="showMoreButton" onclick="showMore('SOMAmoreInfo')">Show More</button>
+        </div>
+        <div class="imageContent">
+            <img id="SOMAImage" src="pictures\somaLongerIcon.jpg" alt="SOMA">
+        </div>
+    </div>
+    <div id="SOMAmoreInfo" class="infoSection slide" data-parallax>
+        <p id="SOMAmoreInfo">This game makes you truly question what it means to be human. To what extents will humanity go to for self preservation? If this seems intruiging to you, SOMA will most likely be a game you will heavily enjoy. Additionally, it sports beautiful and eery underwater scenery and sci-fi elements. The monsters are no short of terrifying and their stories are something you will never wish on anyone. </p> 
+        <a href="https://store.steampowered.com/app/282140/SOMA/" class="steam" target="_blank" title="SOMA on Steam"></a>
+    </div>
+
+    <div id="signalis" class="infoSection">
+        <div class="textContent">
+            <h2 id="signalisTitle">Signalis</h2>
+            <h4 id="signalisDeveloper">Developer: rose-engine</h4>
+            <p id="signalisParagraph">A phenomenal survival horror game following the journey of ELSTER as you navigate her through a tragic scene looking for a lost loved one.<br> It utilizes a very pixelated graphic style to further immerse you into its story.</p>
+            <button id="signalisButtons" class="showMoreButton" onclick="showMore('signalisMoreInfo')">Show More</button>
+        </div>
+        <div class="imageContent">
+            <img id="signalisImage" src="pictures\signalisIco.png" alt="Signalis">
+        </div>
+    </div>
+
+    <div id="signalisMoreInfo" class="infoSection slide" data-parallax>
+        <p id="signalismoreInfo">Signalis' story keeps you trapped in an endless cycle of asking 'why' but never gives you an answer. It makes you keep moving forward with barely a sliver of a motive that you make ELSTER hold onto. It asks you who you are, gives you an answer then rips it away again with another question. The hopelessness emulated by the setting of a zombie infested mineshaft further adds to this. Signalis confuses you, makes you go through loops of questions and preys on your mind. If you enjoy a good psychological and survival horror, this game is highly recommended and is available on Steam. </p> 
+        <a href="https://store.steampowered.com/app/1029640/Signalis/" class="steam" target="_blank" title="Signalis on Steam"></a>
+    </div>
+
+    <div id="stillWakestheDeep" class="infoSection">
+        <div class="textContent">
+            <h2 id="stillWakestheDeepTitle">Still Wakes the Deep</h2>
+            <h4 id="stillWakestheDeepDeveloper">Developer: The Chinese Room</h4>
+            <p id="stillWakestheDeepParagraph">A terrifying horror game following an oil rig worker called McLeary.<br> Disaster strikes the oil rig McLeary works at, and you must try and aid him in salvaging whatever you can while trying to stay sane from the harrowing creatures that try to kill you.</p>
+            <button id="stillWakestheDeepButtons" class="showMoreButton" onclick="showMore('stillWakestheDeepmoreInfo')">Show More</button>
+        </div>
+        <div class="imageContent">
+            <img id="stillWakestheDeepImage" src="pictures\stillWakesTheDeepIcon.jpg" alt="Still Wakes the Deep">
+        </div>
+    </div> 
+    <div id="stillWakestheDeepmoreInfo" class="infoSection slide" data-parallax>
+        <p id="stillWakestheDeepMoreInfo">Still Wakes the Deep sports phenomenal voice acting and a story you won't forget even after it's done. Its setting and atmosphere are beautiful, the story is tragic yet full of hope and the monsters will make you run away in terror. It forces you to keep going in a hopeless situation and explore the complete unknown. If you're a fan of heavy body horror, cosmic horror/eldritch horror similar to that of Bloodborne or Souls games, then this is definently a game for you.   </p>
+        <a href="https://store.steampowered.com/app/1622910/Still_Wakes_the_Deep/" class="steam" target="_blank" title="Still Wakes the Deep on Steam"></a>
+    </div>
+</section>
+</body>
+</html>

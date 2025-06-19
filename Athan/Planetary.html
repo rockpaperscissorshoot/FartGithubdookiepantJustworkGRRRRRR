@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Minipedia</title>
+  <style>
+    body {
+      background-color: #000;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='black'/><circle cx='20' cy='30' r='1' fill='white' opacity='0.4'/><circle cx='60' cy='80' r='1' fill='white' opacity='0.4'/><circle cx='100' cy='50' r='1' fill='white' opacity='0.4'/><circle cx='140' cy='120' r='1' fill='white' opacity='0.4'/><circle cx='180' cy='40' r='1' fill='white' opacity='0.4'/><circle cx='50' cy='150' r='1' fill='white' opacity='0.4'/><circle cx='90' cy='160' r='1' fill='white' opacity='0.4'/><circle cx='130' cy='10' r='1' fill='white' opacity='0.4'/><circle cx='170' cy='170' r='1' fill='white' opacity='0.4'/><circle cx='30' cy='110' r='1' fill='white' opacity='0.4'/></svg>");
+      background-size: 200px 200px;
+      color: #fff;
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #navbar {
+      background-color: black;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 48px;
+    }
+
+    header h2 {
+      margin: 10px 0;
+      font-size: 32px;
+      font-weight: normal;
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 40px;
+      border-collapse: collapse;
+      text-align: center;
+      color: white;
+    }
+
+    table th {
+      border: 1px solid #444;
+      padding: 10px;
+      font-size: 32px;
+    }
+
+    table td {
+      border: 1px solid #444;
+      padding: 10px;
+    }
+
+    table td a {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    table td a:hover {
+      text-decoration: underline;
+    }
+
+    .moon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 10px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+    }
+
+    .moon img {
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+      border: 2px solid #fff;
+      object-fit: cover;
+    }
+
+    .moon h2 {
+      margin: 0 0 10px;
+    }
+
+    .moon p {
+      margin: 0;
+      text-align: justify;
+    }
+
+    .back-to-top {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .back-to-top:hover {
+      text-decoration: underline;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #visit-counter {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 18px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Minipedia</h1>
+  </header>
+  <div id="navbar">
+    <a href="/Mainpage/homepage.html">Home</a>
+    <a href="/Moksha/idea/index.html">Art</a>
+    <a href="/Athan/Planetary.html">Moons</a>
+    <a href="/Wilson/pages/hamsters/hamsters.html">Hamsters</a>
+    <a href="/Claire/indieHorrorGames/indieHorrorGame.html">Horror</a>
+    <a href="/Matt/index.html">Ice cream</a>
+    <a href="/Monica/Home.html">Whooper</a>
+    <a href="/Sheridon/Home.html">Chips</a>
+  </div>
+  <div id="visit-counter">Number of Visits: <span id="visit-count"></span></div>
+  <header>
+    <h2>Moons of the Solar System</h2>
+  </header>
+  <div id="sun-animation">
+    <img src="Moon.webp" alt="Moon Animation" style="max-width: 100%; height: auto;">
+  </div>
+  <table>
+    <tr>
+      <th id="top">Small Moons</th>
+      <th>Medium Moons</th>
+      <th>Large Moons</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="#Amalthea">Amalthea</a><br>
+        <a href="#Deimos">Deimos</a><br>
+        <a href="#Nereid">Nereid</a><br>
+        <a href="#Phobos">Phobos</a><br>
+      </td>
+      <td>
+        <a href="#Ariel">Ariel</a><br>
+        <a href="#Charon">Charon</a><br>
+        <a href="#Dione">Dione</a><br>
+        <a href="#Enceladus">Enceladus</a><br>
+        <a href="#Iapetus">Iapetus</a><br>
+        <a href="#Mimas">Mimas</a><br>
+        <a href="#Miranda">Miranda</a><br>
+        <a href="#Rhea">Rhea</a><br>
+        <a href="#Tethys">Tethys</a><br>
+        <a href="#Umbriel">Umbriel</a><br>
+      </td>
+      <td>
+        <a href="#Callisto">Callisto</a><br>
+        <a href="#Europa">Europa</a><br>
+        <a href="#Ganymede">Ganymede</a><br>
+        <a href="#Io">Io</a><br>
+        <a href="#Titan">Titan</a><br>
+        <a href="#Triton">Triton</a><br>
+      </td>
+    </tr>
+  </table>
+  <div class="moon">
+    <img src="Amalthea.png" alt="Amalthea">
+    <div>
+      <h2 id="Amalthea">Amalthea</h2>
+      <p>Amalthea is a small, irregularly shaped moon orbiting close to Jupiter. Its rugged, cratered surface tells a
+        story of violent collisions and tidal interactions. Despite its modest size, the low albedo and porous nature of
+        Amalthea offer significant clues about the composition and evolutionary history of Jupiter's innermost
+        satellites.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Deimos.png" alt="Deimos">
+    <div>
+      <h2 id="Deimos">Deimos</h2>
+      <p>Deimos, the smaller and more distant of Mars’ moons, features a relatively smooth and uniform surface peppered
+        with shallow craters. Its gentle, less tumultuous appearance, in contrast to its companion Phobos, has led
+        scientists to speculate about its origin as a captured asteroid. Deimos continues to intrigue researchers with
+        its subtle yet significant geological history.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Nereid.png" alt="Nereid">
+    <div>
+      <h2 id="Nereid">Nereid</h2>
+      <p>Nereid is an enigmatic, irregularly shaped moon of Neptune, known for its highly eccentric orbit. Its battered,
+        cratered surface and unpredictable trajectory hint at a tumultuous past shaped by gravitational interactions and
+        collisions. Nereid remains a key object in unraveling the chaotic dynamical processes that govern the outer
+        solar system.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Phobos.png" alt="Phobos">
+    <div>
+      <h2 id="Phobos">Phobos</h2>
+      <p>Phobos, one of Mars’ two moons, is a small, irregularly shaped body that orbits extremely close to the Red
+        Planet. Its surface, marked by grooves and the enormous Stickney crater, tells a tale of constant bombardment
+        and tidal disruption. The relentless gravitational pull from Mars is gradually altering Phobos’ orbit and
+        physical structure, making it a fascinating case study in celestial mechanics.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Ariel.png" alt="Ariel">
+    <div>
+      <h2 id="Ariel">Ariel</h2>
+      <p>Ariel, one of Uranus' brightest moons, exhibits a surprisingly varied terrain that includes smooth, reflective
+        plains, extensive canyons, and remnants of ancient cryovolcanic flows. The juxtaposition of younger, less
+        cratered regions with areas bearing the scars of old impacts tells a complex story of resurfacing and tectonic
+        activity, making Ariel a captivating subject for ongoing planetary research.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Charon.png" alt="Charon">
+    <div>
+      <h2 id="Charon">Charon</h2>
+      <p>Charon, the largest moon of Pluto, is nearly half the size of its parent dwarf planet. This significant size
+        ratio has led to theories of a shared origin, possibly the result of a colossal collision. Charon’s surface is
+        etched with deep canyons, smooth plains, and hints of cryovolcanism, weaving a complex geological narrative that
+        continues to captivate planetary scientists.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Dione.png" alt="Dione">
+    <div>
+      <h2 id="Dione">Dione</h2>
+      <p>Dione offers a fascinating glimpse into the interplay between ancient, heavily cratered regions and
+        surprisingly bright, wispy terrains. These contrasting features suggest a history marked by both violent impacts
+        and episodes of resurfacing, possibly through cryovolcanism. Dione's diverse landscape makes it a valuable
+        subject for studies on the thermal and geological evolution of icy moons.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Enceladus.png" alt="Enceladus">
+    <div>
+      <h2 id="Enceladus">Enceladus</h2>
+      <p>Enceladus captivates scientists with its brilliant, icy surface and dramatic plumes that burst forth from
+        fissures near its south pole. These geysers, which eject water vapor and ice particles, hint at a hidden ocean
+        beneath the surface, potentially harboring the essential ingredients for life. Its reflective exterior and
+        active cryovolcanism make Enceladus one of the most intriguing targets for astrobiological research.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Iapetus.png" alt="Iapetus">
+    <div>
+      <h2 id="Iapetus">Iapetus</h2>
+      <p>Iapetus is strikingly unique due to its dramatic two-toned appearance: one hemisphere is cloaked in dark
+        material while the other gleams in brilliant white. This stark dichotomy may be the result of external dust
+        accumulation or ancient, uneven resurfacing. Iapetus’ mysterious coloration and peculiar features continue to
+        fuel debates about its formation and subsequent evolution.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Mimas.png" alt="Mimas">
+    <div>
+      <h2 id="Mimas">Mimas</h2>
+      <p>Mimas, often nicknamed the "Death Star" moon, is instantly recognizable by its enormous impact crater,
+        Herschel, which dominates its icy surface. This dramatic feature, set against a nearly spherical form, provides
+        a powerful visual testament to the colossal collisions that can shape celestial bodies. Mimas stands as a
+        remarkable example of how a single impact can define an entire moon's character.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Miranda.png" alt="Miranda">
+    <div>
+      <h2 id="Miranda">Miranda</h2>
+      <p>Miranda, orbiting Uranus, is one of the most geologically diverse and bizarre moons known. Its surface is a
+        patchwork of gigantic cliffs, deep canyons, and unusual coronae – oval-shaped features that hint at past
+        episodes of internal melting and reformation. Miranda’s dramatic and varied topography challenges our
+        conventional understanding of the geological processes that can occur on small, icy worlds.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Rhea.png" alt="Rhea">
+    <div>
+      <h2 id="Rhea">Rhea</h2>
+      <p>Rhea, one of Saturn's larger moons, is marked by a surface that combines heavily cratered regions with
+        enigmatic, wispy streaks. These features suggest a past of tectonic shifts or cryovolcanic activity. Rhea's
+        ancient icy terrain, punctuated by the scars of numerous impacts, provides a compelling record of the processes
+        that have shaped the outer solar system over immense spans of time.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Tethys.png" alt="Tethys">
+    <div>
+      <h2 id="Tethys">Tethys</h2>
+      <p>Tethys is characterized by its expansive, ancient surface dominated by deep chasms and large impact basins. One
+        of its most notable features, Ithaca Chasma, is a vast canyon that encircles much of the moon. This intricate
+        tapestry of fractured terrain and smooth plains tells a story of internal stresses and relentless bombardment
+        over eons.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Umbriel.png" alt="Umbriel">
+    <div>
+      <h2 id="Umbriel">Umbriel</h2>
+      <p>Umbriel is a dark, enigmatic moon of Uranus, characterized by its heavily cratered and shadowy surface. Its low
+        albedo and ancient, pockmarked terrain suggest that little geological change has occurred over billions of
+        years. The mixture of water ice with darker, organic-rich materials provides valuable insights into the
+        primordial conditions and evolutionary processes at work in the outer regions of our solar system.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Callisto.png" alt="Callisto">
+    <div>
+      <h2 id="Callisto">Callisto</h2>
+      <p>Callisto presents an ancient, heavily cratered landscape that serves as a pristine record of the early solar
+        system. With minimal signs of geological resurfacing, this icy satellite preserves the scars of countless
+        impacts over billions of years. Its dark, time-worn terrain provides invaluable insights into the collisional
+        history and primordial conditions that shaped our cosmic neighborhood.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Europa.png" alt="Europa">
+    <div>
+      <h2 id="Europa">Europa</h2>
+      <p>Europa is renowned for its smooth, icy exterior marked by long, linear fractures that hint at a vast, concealed
+        ocean beneath. The interplay of surface ice and potential subsurface water has made Europa one of the prime
+        candidates in the search for extraterrestrial life. Its intricate network of cracks and ridges reveals a dynamic
+        history of tectonic shifts and possible cryovolcanic events.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Ganymede.png" alt="Ganymede">
+    <div>
+      <h2 id="Ganymede">Ganymede</h2>
+      <p>Ganymede, the largest moon in the solar system, is a world of contrasts. It features both heavily cratered
+        regions and surprisingly young, grooved terrains. With its own magnetic field and evidence of tectonic and
+        cryovolcanic processes, Ganymede offers an exceptional glimpse into the complex evolution of icy celestial
+        bodies orbiting giant planets.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Io.png" alt="Io">
+    <div>
+      <h2 id="Io">Io</h2>
+      <p>Io is the most volcanically active body in our solar system, with a surface constantly reshaped by continuous
+        eruptions. Tidal forces from Jupiter cause immense internal friction, heating Io's interior and fueling its
+        violent volcanic outbursts. Its colorful, sulfur-rich landscapes and ever-changing lava flows provide an
+        extraordinary natural laboratory for studying geological activity on a small planetary body.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Titan.png" alt="Titan">
+    <div>
+      <h2 id="Titan">Titan</h2>
+      <p>Titan, Saturn's largest moon, is a world shrouded in mystery with its thick, hazy atmosphere rich in nitrogen
+        and methane. Beneath the orange smog lie lakes of liquid hydrocarbons, vast dune fields, and weather systems
+        that mirror prebiotic Earth. Titan's complex organic chemistry and active geology have made it a focal point for
+        understanding the potential for life in extreme environments.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <div class="moon">
+    <img src="Triton.png" alt="Triton">
+    <div>
+      <h2 id="Triton">Triton</h2>
+      <p>Triton, Neptune’s largest moon, is an extraordinary world with a retrograde orbit and a geologically young
+        surface. Active geysers spew nitrogen gas into space, suggesting a dynamic subsurface environment. Its fractured
+        terrains, evidence of cryovolcanism, and tenuous atmosphere combine to create a landscape that challenges our
+        understanding of icy bodies and their evolution in the outer reaches of the solar system.</p>
+      <a href="#top" class="back-to-top">Back to Table</a>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let count = localStorage.getItem("visitCount") || 0;
+      count = parseInt(count) + 1;
+      localStorage.setItem("visitCount", count);
+      document.getElementById("visit-count").textContent = count;
+    });
+  </script>
+</body>
+
+</html>

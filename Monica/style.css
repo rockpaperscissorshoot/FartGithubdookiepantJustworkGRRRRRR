@@ -1,0 +1,105 @@
+body
+{
+
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(/Monica/images/pokeballblackbackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.whiteFont
+{
+    color: white;
+    text-shadow:5px 5px 5px black;
+}
+
+.banner
+{
+    position: relative;
+    position: center;
+}
+
+.banner img
+{
+    height: 700px;
+}
+
+.banner-text
+{
+    position: absolute;
+    top: 40%;
+    right: 50%
+}
+.container
+{
+    display: flex;
+}
+
+.statSpacing
+{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-style:solid;
+    border-color: black;
+    border-width: 5px;
+}
+
+.border
+{
+    border-style:outset;
+    border-width:5px;
+}
+
+main
+{
+    margin-left:20px;
+    margin-right:20px;
+}
+
+h1
+{
+    font-family: 'Times New Roman', Times, serif; 
+    text-align: center;
+    
+}
+
+h2
+{
+    text-align: center;
+}
+
+.navbar ul
+{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a
+{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center
+}
+
+.navbar a:hover
+{
+    background-color: hsl(0, 0%, 10%);
+}
+.navbar li
+{
+    float: left;
+}
+
+p
+{
+    text-align: center;
+}
